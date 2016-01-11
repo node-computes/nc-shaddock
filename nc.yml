@@ -3,6 +3,14 @@
 ################################################
 
 
+- name: nc-scratch 
+  image: shaddock/nc-scratch:latest
+  priority: 5 
+  env:
+    AUTH: XXXX-XXXX-XXXX-XXXX
+    ETCD_KEY:
+
+
 - name: nc-etcd 
   image: shaddock/nc-etcd:latest
   priority: 10
