@@ -1,6 +1,9 @@
 FROM base/archlinux:latest
 MAINTAINER epheo
 
+RUN pacman -Syu --ignore filesystem --noconfirm
+RUN pacman -S git
+
 RUN set -ex \
   && for key in \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
