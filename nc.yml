@@ -1,13 +1,13 @@
-################################################
-## SHADDOCK: Services Architecture Definition ##
-################################################
+#####################################################
+## Node Computes: Services Architecture Definition ##
+#####################################################
 
 
-- name: nc-scratch 
-  image: shaddock/nc-scratch:latest
-  priority: 5
+#- name: nc-scratch
+#  image: shaddock/nc-scratch:latest
+#  priority: 0
 
-- name: nc-etcd 
+- name: nc-etcd
   image: shaddock/nc-etcd:latest
   priority: 10
 

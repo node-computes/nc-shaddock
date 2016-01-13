@@ -13,8 +13,10 @@ RUN set -ex \
     gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
   done
 
-#RUN pacman -Syu --ignore filesystem --noconfirm
-RUN pacman -Sy git --ignore filesystem --noconfirm
+RUN pacman -Sy archlinux-keyring --ignore filesystem --noconfirm
+RUN pacman -Syu --ignore filesystem --noconfirm
+RUN pacman-db-upgrade
+RUN pacman -S git --ignore filesystem --noconfirm
 
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 5.4.0
